@@ -1,16 +1,15 @@
-import styled from 'styled-components';
-import NxWelcome from './nx-welcome';
+import * as React from 'react'
 
-const StyledApp = styled.div`
-  // Your style here
-`;
+// 1. import `ChakraProvider` component
+import { Box, ChakraProvider } from '@chakra-ui/react'
 
-export function App() {
+const  App = () => {
+  // 2. Wrap ChakraProvider at the root of your app
   return (
-    <StyledApp>
-      <NxWelcome title="react-app" />
-    </StyledApp>
-  );
+    <ChakraProvider>
+      <Box bg="red.500">Welcome to Meta Marksman LOL</Box>
+    </ChakraProvider>
+  )
 }
 
 export default App;
